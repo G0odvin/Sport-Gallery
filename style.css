@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+}
+
+.people {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  row-gap: 40px;
+  column-gap: 30px;
+  justify-items: center;
+
+  padding: 30px 35px 55px 35px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.person {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+
+  transition-delay: 2s;
+  transition-property: width, height, border-radius;
+}
+
+.rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #fff;
+
+  position: absolute;
+  right: 10px;
+  bottom: 84px;
+
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #8B0000;
+
+  transition-delay: 2s;
+  transition-property: width, height, font-size, line-height, font-size, line-height, position, right, bottom;
+}
+
+.details {
+  text-align: center;
+}
+
+.name {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #2F4F4F;
+
+  transition-delay: 2s;
+  transition-property: font-size, line-height;
+}
+.extra {
+  visibility: hidden;
+  align-items: center;
+}
+.sport {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+
+  transition-delay: 2s;
+  transition-property: font-size, line-height;
+}
+.pay {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+
+  transition-delay: 2s;
+  transition-property: font-size, line-height;
+}
+
+@media screen and (min-width: 1000px) {
+  .people {
+    max-width: 1000px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.person:hover {
+  padding: 10px 10px 16px 10px;
+  background: #EEEEEE;
+  border-radius: 10px;
+
+  z-index: 1;
+}
+
+
+.person:hover .extra {
+  visibility: visible;
+}
+
+.person:hover .img {
+  width: 240px;
+  height: 240px;
+  border-radius: 60px;
+}
+
+.person:hover .sport .pay {
+  font-size: 21.6px;
+  line-height: 25px;
+}
+
+.person:hover .name {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 9px;
+}
+
+.person:hover .rank {
+  width: 38.4px;
+  height: 38.4px;
+  font-size: 19.2px;
+  line-height: 22px;
+  position: absolute;
+  right: 12px;
+  bottom: 100px;
+}
